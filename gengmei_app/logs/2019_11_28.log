@@ -1,0 +1,15 @@
+[2019-11-28 15:29:36,688]-ERROR: test_01__ on_app_session_over埋点异常 line43
+[2019-11-28 15:31:14,040]-INFO: test_01__ device_opened埋点正常 line41
+[2019-11-28 15:31:14,460]-INFO: test_01__ on_app_session_over埋点正常 line56
+[2019-11-28 15:34:04,621]-ERROR: test_01__ home_open埋点异常 line38
+[2019-11-28 15:34:04,900]-ERROR: test_01__ device_opened埋点异常 line56
+[2019-11-28 15:34:04,902]-ERROR: test_01__ app_serial_id不存在！ line77
+[2019-11-28 15:34:05,072]-ERROR: test_01__ is_open_push埋点异常 line88
+[2019-11-28 15:34:05,183]-ERROR: test_01__ urban_geographical_location埋点异常 line103
+[2019-11-28 15:35:45,568]-INFO: test_01__ home_open埋点正常 line41
+[2019-11-28 15:35:45,855]-INFO: test_01__ device_opened埋点正常 line59
+[2019-11-28 15:35:45,858]-ERROR: test_01__ app_serial_id不存在！ line78
+[2019-11-28 15:35:46,034]-INFO: test_01__ is_open_push埋点正常 line91
+[2019-11-28 15:35:46,145]-INFO: test_01__ urban_geographical_location埋点正常 line106
+[2019-11-28 15:36:54,077]-ERROR: test_01__ on_app_session_over埋点异常 line43
+[2019-11-28 15:38:27,584]-ERROR: test_01__ on_app_session_over埋点异常 line43
