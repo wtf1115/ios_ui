@@ -25,6 +25,7 @@ class Homepage_category(unittest.TestCase):
             driver.click_alert()
             driver.click_bns()
             time.sleep(1)
+            driver.background_app(3)
 
         result = mysql_test.query(action='page_view', page_name='category', event_time=begin_date)
         print(result)

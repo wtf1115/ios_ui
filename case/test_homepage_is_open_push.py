@@ -20,8 +20,8 @@ class Homepage_is_open_push(unittest.TestCase):
         begin_date = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         print(begin_date)
 
-        with GMdriver():
-            pass
+        with GMdriver() as driver:
+            driver.background_app(3)
         # 首页埋点
         result = mysql_test.query(action='is_open_push', event_time=begin_date)
         assert len(result) == 1, f'买点数量错误，预期为1个，实际为{len(result)}'

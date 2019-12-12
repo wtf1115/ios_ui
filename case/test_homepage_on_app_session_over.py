@@ -21,9 +21,7 @@ class Homepage_on_app_session_over(unittest.TestCase):
         print(begin_date)
 
         with GMdriver() as driver:
-            driver.click_alert()
-            time.sleep(1)
-            driver.background_app(5)
+            driver.background_app(3)
 
         result = mysql_test.query(action='on_app_session_over', event_time=begin_date)
         assert len(result) == 1, f'买点数量错误，预期为1个，实际为{len(result)}'

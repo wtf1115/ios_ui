@@ -20,8 +20,8 @@ class Homepage_home_open(unittest.TestCase):
         begin_date = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         print(begin_date)
 
-        with GMdriver():
-            pass
+        with GMdriver() as driver:
+            driver.background_app(3)
         print(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
         # 首页埋点
         result = mysql_test.query(action='home_open', event_time=begin_date)
