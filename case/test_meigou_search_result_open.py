@@ -25,6 +25,8 @@ class Meigou_search_result_open(unittest.TestCase):
             driver.click_czsl()
             driver.click_search()
             time.sleep(1)
+            driver.click_diary()
+            driver.click_hot_search()
             driver.background_app(5)
 
         # 搜索框 埋点
