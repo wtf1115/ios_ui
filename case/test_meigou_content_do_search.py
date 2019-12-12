@@ -28,7 +28,8 @@ class Meigou_content_do_search(unittest.TestCase):
             driver.click_search()
             driver.click_content()
             driver.click_hot_search()
-            driver.background_app(5)
+            time.sleep(2)
+            driver.background_app(3)
 
         # 搜索框 埋点
         result_do_search = mysql_test.query(action='do_search',page_name='search_home',event_time=begin_date)
@@ -36,7 +37,7 @@ class Meigou_content_do_search(unittest.TestCase):
         print(result_do_search)
         do_search_create_time = result_do_search[0]['event_time']
         print("page_view: %s" % do_search_create_time)
-        raw_data = result_do_search[0]['params']
+        raw_data = result_do_search[0]['raw_data']['params']
         assert raw_data['tab'] == '综合'
 
 
