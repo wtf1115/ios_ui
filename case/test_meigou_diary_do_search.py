@@ -36,7 +36,7 @@ class Meigou_diary_do_search(unittest.TestCase):
         print(result_do_search)
         do_search_create_time = result_do_search[0]['event_time']
         print("page_view: %s" % do_search_create_time)
-        raw_data = result_do_search[0]['raw_data']['params']
+        raw_data = json.loads(result_do_search[0]['raw_data'])['params']
         assert raw_data['tab'] == '日记'
 
 

@@ -21,7 +21,7 @@ class Homepage_on_click_navbar_search(unittest.TestCase):
             driver.click_alert()
             driver.home_search()
             time.sleep(1)
-            driver.background_app(5)
+            driver.background_app(3)
 
         result = mysql_test.query(action='on_click_navbar_search', page_name='search_home', event_time=begin_date)
         end_date_home_open = result[0]['event_time']
