@@ -19,10 +19,8 @@ class Homepage_device_open(unittest.TestCase):
         begin_date = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         print(begin_date)
 
-        with GMdriver() as driver:
-            driver.click_alert()
-            time.sleep(1)
-            driver.background_app(5)  # 退出后台5秒 ，再次进入app
+        with GMdriver():
+            pass
         # 首页埋点
         result = mysql_test.query(action='device_opened', event_time=begin_date)
         assert len(result) == 1, f'买点数量错误，预期为1个，实际为{len(result)}'

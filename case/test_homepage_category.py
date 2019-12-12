@@ -25,11 +25,6 @@ class Homepage_category(unittest.TestCase):
             driver.click_alert()
             driver.click_bns()
             time.sleep(1)
-            # 切换到后台
-            driver.background_app(5)
-
-        # sql_page_view2 = "select * from maidian_history_data where device_id ='{}' and action = 'page_view'" \
-        #                  " and page_name = 'category'  and event_time > '{}' order by event_time desc".format(canshu.dev_id,begin_date)
 
         result = mysql_test.query(action='page_view', page_name='category', event_time=begin_date)
         print(result)

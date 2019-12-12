@@ -8,6 +8,7 @@ from common.gmdriver import GMdriver
 
 from common.Log import Log
 
+
 class Homepage_is_open_push(unittest.TestCase):
     log = Log()
 
@@ -19,10 +20,8 @@ class Homepage_is_open_push(unittest.TestCase):
         begin_date = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         print(begin_date)
 
-        with GMdriver() as driver:
-            driver.click_alert()
-            time.sleep(1)
-            driver.background_app(5)  # 退出后台5秒 ，再次进入app
+        with GMdriver():
+            pass
         # 首页埋点
         result = mysql_test.query(action='is_open_push', event_time=begin_date)
         assert len(result) == 1, f'买点数量错误，预期为1个，实际为{len(result)}'
@@ -36,20 +35,6 @@ class Homepage_is_open_push(unittest.TestCase):
             pass
         else:
             self.log.error("params_type不存在！")
-        '''
-
-        result = mysql_test.query(action='urban_geographical_location', event_time=begin_date)
-        assert len(result) == 1, f'买点数量错误，预期为1个，实际为{len(result)}'
-        end_date_urban_geographical_location = result[0]['event_time']
-        print("urban_geographical_location: %s" % end_date_urban_geographical_location)
-        assert begin_date < end_date_urban_geographical_location, f"page_view埋点异常"
-        if begin_date > end_date_urban_geographical_location:
-            self.log.error("urban_geographical_location埋点异常")
-        else:
-            self.log.info("urban_geographical_location埋点正常")
-
-        time.sleep(10)
-        '''
 
 
 if __name__ == '__main__':
