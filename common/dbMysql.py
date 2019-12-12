@@ -17,6 +17,8 @@ class GMMysql(object):
             print(errormsg)
             exit(2)
 
+        self.cursor = self.conn.cursor()
+
     def exec(self, sql):
         """执行dml,ddl语句"""
         try:
@@ -27,7 +29,6 @@ class GMMysql(object):
 
     def query(self, sql=None, **kwargs):
         """查询数据"""
-        self.cursor = self.conn.cursor()
         # 如果传参，那么动态组装sql语句
         if kwargs:
             action = kwargs.get('action')
@@ -37,17 +38,19 @@ class GMMysql(object):
             if not all((action, event_time)):
                 raise Exception('action,event_time不支持单独传参！')
             sql = "select * from maidian_history_data where device_id ='{device_id}' and action = '{action}' and " \
-                  "event_time > '{event_time}'" + (" and page_name = '{page_name}'" if page_name else " ") + " order by event_time desc"
+                  "event_time > '{event_time}'" + (
+                      " and page_name = '{page_name}'" if page_name else " ") + " order by event_time desc"
             self.cursor.execute(sql.format_map(kwargs))
         else:
             self.cursor.execute(sql)
+        self.conn.commit()
         data = self.cursor.fetchall()
 
-        self.cursor.close()
         return data
 
     def __del__(self):
         """ 关闭mysql连接 """
+        self.cursor.close()
         self.conn.close()
 
 

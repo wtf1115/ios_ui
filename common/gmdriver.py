@@ -260,7 +260,8 @@ class GMdriver(BasePage):
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        time.sleep(5)
         self.driver.quit()
         if exc_type:
             raise Exception(exc_val)
+
+        time.sleep(10)
