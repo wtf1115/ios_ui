@@ -1,5 +1,5 @@
 from appium import webdriver
-from gengmei_app.common.basepage import BasePage
+from common.basepage import BasePage
 from selenium.webdriver.common.by import By
 import time
 from selenium.webdriver.support.ui import WebDriverWait  # added by longshu on 2019-12-06

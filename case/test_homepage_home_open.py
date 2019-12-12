@@ -3,10 +3,10 @@ import datetime
 import time
 import json
 
-from gengmei_app.common.dbMysql import mysql_test
-from gengmei_app.common.gmdriver import GMdriver
+from common.dbMysql import mysql_test
+from common.gmdriver import GMdriver
 
-from gengmei_app.common.Log import Log
+from common.Log import Log
 
 
 class Homepage_home_open(unittest.TestCase):

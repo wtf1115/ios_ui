@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 import time
 
 import os.path
-from gengmei_app.common.logger import Logger
+from common.logger import Logger
 
 logger=Logger(logger="BasePage").getlog()
 
