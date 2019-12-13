@@ -33,9 +33,7 @@ class Meigou_welfare_home(unittest.TestCase):
         page_view_raw_data_all = result[0]['raw_data']
         page_view_raw_data = json.loads(page_view_raw_data_all)
         print(page_view_raw_data)
-        page_view_referrer = page_view_raw_data['params']['referrer']
         page_view_page_name = page_view_raw_data['params']['page_name']
-        assert page_view_referrer == 'home', 'referrer获取错误！实际：{}'.format(page_view_referrer)
         assert page_view_page_name == 'welfare_home', 'page_name获取错误！实际：{}'.format(page_view_page_name)
 
 
