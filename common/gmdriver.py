@@ -31,11 +31,12 @@ class GMdriver(BasePage):
             "udid": "00008030-00021D880A08802E"
         }
         i = 0
-        while i < 3:
+        while i < 5:
             try:
                 self.driver = webdriver.Remote("http://localhost:4723/wd/hub", self.desired_caps)
                 break
             except:
+                time.sleep(3)
                 i += 1
         else:
             raise Exception('Error: Fail to get driver!')
