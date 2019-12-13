@@ -8,7 +8,7 @@ import time
 import os.path
 from common.logger import Logger
 
-logger=Logger(logger="BasePage").getlog()
+logger = Logger(logger="BasePage").getlog()
 
 
 class BasePage(object):
@@ -47,13 +47,13 @@ class BasePage(object):
 
         self.driver.quit()
 
-    def find_element(self,*loc):
+    def find_element(self, *loc):
         try:
-            WebDriverWait(self.driver,10).until(EC.visibility_of_element_located(loc))
+            WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(loc))
             return self.driver.find_element(*loc)
-            logger.info("找到页面元素%s",*loc)
+            logger.info("找到页面元素%s", *loc)
         except:
-            logger.error("%s 页面中未能找到%s元素"%(self, loc))
+            logger.error("%s 页面中未能找到%s元素" % (self, loc))
 
     # 保存图片
     def get_windows_img(self):
@@ -76,7 +76,7 @@ class BasePage(object):
             self.get_windows_img()
 
     # 清除文本框
-    def clear(self,*loc):
+    def clear(self, *loc):
         elem = self.find_element(*loc)
         try:
             elem.clear()
@@ -84,7 +84,7 @@ class BasePage(object):
             self.get_windows_img()
 
     # 点击元素
-    def click(self,*loc):
+    def click(self, *loc):
         elem = self.find_element(*loc)
         try:
             elem.click()
@@ -131,6 +131,13 @@ class BasePage(object):
             print('定位方式不推荐')
             raise NameError("Faild to find the elements")
 
-    def background_app(self,t):
+    def background_app(self, t):
         self.driver.background_app(t)
 
+    def swipe_ios(self):
+        # 这地方仅做简单滑动，不再支持动态传参
+        size = self.driver.get_window_size()
+        x, y = size['width'], size['height']
+        self.driver.execute_script("mobile:dragFromToForDuration",
+                                   {"duration": 0.5, "element": None, "fromX": int(x / 4), "fromY": int(y / 4),
+                                    "toX": int(3 * x / 4), "toY": int(3 * y / 4)})

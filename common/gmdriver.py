@@ -181,7 +181,6 @@ class GMdriver(BasePage):
         self.waiter.until(
             lambda x: self.driver.find_element_by_xpath('//XCUIElementTypeButton[@name="综合"]')).click()
 
-
     def click_wiki(self):
         """
         点击百科
@@ -265,3 +264,5 @@ class GMdriver(BasePage):
             raise Exception(exc_val)
 
         time.sleep(10)
+
+

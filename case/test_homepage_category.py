@@ -37,6 +37,5 @@ class Homepage_category(unittest.TestCase):
         assert referrer == 'home', 'referrer获取错误！'
         assert page_name == 'category', 'page_name获取错误！'
 
-
 if __name__ == '__main__':
     unittest.main()
