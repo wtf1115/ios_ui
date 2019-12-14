@@ -51,7 +51,6 @@ class BasePage(object):
         try:
             WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(loc))
             return self.driver.find_element(*loc)
-            logger.info("找到页面元素%s", *loc)
         except:
             logger.error("%s 页面中未能找到%s元素" % (self, loc))
 

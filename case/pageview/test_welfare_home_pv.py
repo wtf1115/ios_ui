@@ -22,7 +22,7 @@ class Welfare_home_pv(unittest.TestCase):
         with GMdriver() as driver:
             driver.click_alert()
             # 点击美购首页
-            driver.click_welfare()
+            driver.click_welfare_home()
             time.sleep(1)
             driver.background_app(5)
 

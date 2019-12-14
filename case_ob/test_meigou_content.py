@@ -27,7 +27,7 @@ class Testbuild(Testtodolist):
         testbuild. click_alert()
 
         # 点击美购首页
-        testbuild.click_meigou()
+        testbuild.click_welfare()
 
         time.sleep(10)
         self.driver.background_app(5)

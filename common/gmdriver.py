@@ -133,21 +133,22 @@ class GMdriver(BasePage):
         """
         self.waiter.until(lambda x: self.driver.find_element_by_xpath(
             '(//XCUIElementTypeStaticText[@name="玻尿酸"])[1]/..')).click()
+    def click_welfare_home(self):
+        """
+        搜索的美购首页
+        :return:
+        """
+        self.waiter.until(
+            lambda x: self.driver.find_element_by_xpath('//XCUIElementTypeStaticText[@name="美购"]')).click()
+
 
     def click_welfare(self):
         """
-        点击美购首页
+        搜索的美购按钮
         :return:
         """
         self.waiter.until(
-            lambda x: self.driver.find_element_by_xpath('//XCUIElementTypeStaticText[@name="美购"]')).click()
-    def click_welfare_statictext(self):
-        '''
-        搜索结果页中点击美购
-        :return:
-        '''
-        self.waiter.until(
-            lambda x: self.driver.find_element_by_xpath('//XCUIElementTypeStaticText[@name="美购"]')).click()
+            lambda x: self.driver.find_element_by_xpath('//XCUIElementTypeButton[@name="美购"]')).click()
 
     def click_czsl(self):
         """
@@ -183,13 +184,6 @@ class GMdriver(BasePage):
         self.waiter.until(
             lambda x: self.driver.find_element_by_xpath('//XCUIElementTypeButton[@name="日记"]')).click()
 
-    def click_diary_statictext(self):
-        '''
-        搜索结果页中点击日记
-        :return:
-        '''
-        self.waiter.until(
-            lambda x: self.driver.find_element_by_xpath('//XCUIElementTypeStaticText[@name="日记"]')).click()
 
     def click_content(self):
         """
@@ -199,14 +193,6 @@ class GMdriver(BasePage):
         self.waiter.until(
             lambda x: self.driver.find_element_by_xpath('//XCUIElementTypeButton[@name="综合"]')).click()
 
-    def click_content_statictext(self):
-        '''
-        搜索结果页中点击综合
-        :return:
-        '''
-        self.waiter.until(
-            lambda x: self.driver.find_element_by_xpath('//XCUIElementTypeStaticText[@name="综合"]')).click()
-
     def click_wiki(self):
         """
         点击百科
@@ -214,13 +200,7 @@ class GMdriver(BasePage):
         """
         self.waiter.until(
             lambda x: self.driver.find_element_by_xpath('//XCUIElementTypeButton[@name="百科"]')).click()
-    def click_wiki_statictext(self):
-        '''
-        搜索结果页中点击百科
-        :return:
-        '''
-        self.waiter.until(
-            lambda x: self.driver.find_element_by_xpath('//XCUIElementTypeStaticText[@name="百科"]')).click()
+
 
     def click_tractate(self):
         """
@@ -230,14 +210,6 @@ class GMdriver(BasePage):
         self.waiter.until(
             lambda x: self.driver.find_element_by_xpath('//XCUIElementTypeButton[@name="帖子"]')).click()
 
-    def click_tractate_statictext(self):
-        '''
-        搜索结果页中点击帖子
-        :return:
-        '''
-        self.waiter.until(
-            lambda x: self.driver.find_element_by_xpath('//XCUIElementTypeStaticText[@name="帖子"]')).click()
-
     def click_hospital(self):
         """
         点击医院
@@ -246,13 +218,6 @@ class GMdriver(BasePage):
 
         self.waiter.until(
             lambda x: self.driver.find_element_by_xpath('//XCUIElementTypeButton[@name="医院"]')).click()
-    def click_hospital_statictext(self):
-        '''
-        搜索结果页中点击医院
-        :return:
-        '''
-        self.waiter.until(
-            lambda x: self.driver.find_element_by_xpath('//XCUIElementTypeStaticText[@name="医院"]')).click()
 
     def click_doctor(self):
         """
@@ -262,13 +227,7 @@ class GMdriver(BasePage):
         self.waiter.until(
             lambda x: self.driver.find_element_by_xpath('//XCUIElementTypeButton[@name="医生"]')).click()
 
-    def click_doctor_statictext(self):
-        '''
-        搜索结果页中点击医生
-        :return:
-        '''
-        self.waiter.until(
-            lambda x: self.driver.find_element_by_xpath('//XCUIElementTypeStaticText[@name="医生"]')).click()
+
     def click_shopping_cart(self):
         """
         点击美购首页、购物车

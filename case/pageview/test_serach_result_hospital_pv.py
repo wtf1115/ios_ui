@@ -25,7 +25,7 @@ class Search_result_hospital_pv(unittest.TestCase):
             ele.send_keys('美莱')
             driver.click_search_button_sys()
             time.sleep(5)
-            driver.click_hospital_statictext()
+            driver.click_hospital()
             time.sleep(1)
             driver.background_app(3)
 

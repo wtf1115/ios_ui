@@ -25,7 +25,7 @@ class Search_result_wiki_pv(unittest.TestCase):
             ele.send_keys('美莱')
             driver.click_search_button_sys()
             time.sleep(5)
-            driver.click_wiki_statictext()
+            driver.click_wiki()
             time.sleep(1)
             driver.background_app(3)
 

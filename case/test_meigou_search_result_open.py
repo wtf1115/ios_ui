@@ -20,7 +20,7 @@ class Meigou_search_result_open(unittest.TestCase):
 
         with GMdriver() as driver:
             driver.click_alert()
-            driver.click_meigou()
+            driver.click_welfare_home()
             time.sleep(1)
             driver.click_czsl()
             driver.click_search()

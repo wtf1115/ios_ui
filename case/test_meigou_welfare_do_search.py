@@ -21,12 +21,12 @@ class Meigou_welfare_do_search(unittest.TestCase):
 
         with GMdriver() as driver:
             driver.click_alert()
-            driver.click_meigou()
+            driver.click_welfare_home()
             time.sleep(1)
             driver.click_czsl()
             time.sleep(1)
             driver.click_search()
-            driver.click_meigou()
+            driver.click_welfare()
             driver.click_hot_search()
             driver.background_app(5)
 
