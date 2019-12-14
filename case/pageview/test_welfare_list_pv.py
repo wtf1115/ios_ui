@@ -8,10 +8,10 @@ from common.gmdriver import GMdriver
 
 from common.Log import Log
 
-class Meigou_welfare_list(unittest.TestCase):
+class Welfare_list_pv(unittest.TestCase):
     log = Log()
 
-    def test_welfare_list(self):
+    def test_welfare_list_pv(self):
         """
         美购首页->品类聚合除皱廋脸
         """
@@ -21,7 +21,7 @@ class Meigou_welfare_list(unittest.TestCase):
 
         with GMdriver() as driver:
             driver.click_alert()
-            driver.click_meigou()
+            driver.click_welfare()
             time.sleep(1)
             driver.click_czsl()
             time.sleep(1)
@@ -35,10 +35,8 @@ class Meigou_welfare_list(unittest.TestCase):
         result_page_view_welfare_list_all = result_page_view_welfare_list[0]['raw_data']
         page_view_welfare_list = json.loads(result_page_view_welfare_list_all)
         referrer_page_view_welfare_list = page_view_welfare_list['params']['referrer']
-        page_name_page_view_welfare_list = page_view_welfare_list['params']['page_name']
         assert referrer_page_view_welfare_list == 'welfare_home', 'referrer获取错误！'
-        assert page_name_page_view_welfare_list == 'welfare_list', 'page_name获取错误！'
-        print("page_view: %s" % result_page_view_welfare_list_create_time)
+        print("target埋点: %s" % result_page_view_welfare_list_create_time)
 
 
 if __name__ == '__main__':

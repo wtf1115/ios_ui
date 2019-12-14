@@ -29,7 +29,7 @@ class Homepage_is_open_push(unittest.TestCase):
         end_raw_data = result[0]['raw_data']
         raw_data = json.loads(end_raw_data)
         params_type = raw_data['params']['type']
-        print("is_open_push: %s" % end_date_is_open_push)
+        print("target埋点: %s" % end_date_is_open_push)
         # 判断 params_type 存在
         if params_type:
             pass

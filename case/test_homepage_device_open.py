@@ -32,7 +32,7 @@ class Homepage_device_open(unittest.TestCase):
         app_serial_id = raw_data['app']['serial_id']  # 2019.11.27号增加
         # android_device_id = raw_data['device']['android_device_id']
         params = raw_data['params']
-        print("device_opened: %s" % end_date_device_opened)
+        print("target埋点: %s" % end_date_device_opened)
         if params:
             pass
         else:

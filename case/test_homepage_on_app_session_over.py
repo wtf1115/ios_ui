@@ -31,7 +31,7 @@ class Homepage_on_app_session_over(unittest.TestCase):
         app_serial_id = raw_data['app']['serial_id']
         params_duration = raw_data['params']['duration']
         app_session_id = raw_data['app_session_id']
-        print("on_app_session_over: %s" % end_page_view)
+        print("target埋点: %s" % end_page_view)
         if app_serial_id:
             pass
         else:

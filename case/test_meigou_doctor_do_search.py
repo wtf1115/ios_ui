@@ -34,7 +34,7 @@ class Meigou_doctor_do_search(unittest.TestCase):
         assert len(result_do_search) == 1, f'买点数量错误，预期为1个，实际为{len(result_do_search)}'
         print(result_do_search)
         do_search_create_time = result_do_search[0]['event_time']
-        print("page_view: %s" % do_search_create_time)
+        print("target埋点: %s" % do_search_create_time)
         raw_data = json.loads(result_do_search[0]['raw_data'])['params']
         assert raw_data['tab'] == '医生'
 

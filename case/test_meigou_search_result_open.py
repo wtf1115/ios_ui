@@ -33,7 +33,7 @@ class Meigou_search_result_open(unittest.TestCase):
         result_search_result_open = mysql_test.query(action='search_result_open', event_time=begin_date)
         assert len(result_search_result_open) == 1, f'埋点数量错误，预期为1个，实际为{len(result_search_result_open)}'
         search_result_open_create_time = result_search_result_open[0]['event_time']
-        print("page_view: %s" % search_result_open_create_time)
+        print("target埋点: %s" % search_result_open_create_time)
 
 
 if __name__ == '__main__':

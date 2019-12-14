@@ -31,7 +31,7 @@ class Meigou_welfare_home_click_section(unittest.TestCase):
         result_welfare_home_click_section = mysql_test.query(action='welfare_home_click_section', event_time=begin_date)
         assert len(result_welfare_home_click_section) == 1, f'买点数量错误，预期为1个，实际为{len(result_welfare_home_click_section)}'
         end_welfare_home_click_section_create_time = result_welfare_home_click_section[0]['event_time']
-        print("page_view: %s" % end_welfare_home_click_section_create_time)
+        print("target埋点: %s" % end_welfare_home_click_section_create_time)
 
 
 
