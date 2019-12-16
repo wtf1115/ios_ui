@@ -30,7 +30,7 @@ class Welfare_list_pv(unittest.TestCase):
         #美购首页点击 聚合标签
         result_page_view_welfare_list = mysql_test.query(action='page_view', page_name='welfare_list',
                                                          event_time=begin_date)
-        assert len(result_page_view_welfare_list) == 1, f'买点数量错误，预期为1个，实际为{len(result_page_view_welfare_list)}'
+        assert len(result_page_view_welfare_list) == 1, f'埋点数量错误，预期为1个，实际为{len(result_page_view_welfare_list)}'
         result_page_view_welfare_list_create_time = result_page_view_welfare_list[0]['event_time']
         result_page_view_welfare_list_all = result_page_view_welfare_list[0]['raw_data']
         page_view_welfare_list = json.loads(result_page_view_welfare_list_all)

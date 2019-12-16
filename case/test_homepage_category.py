@@ -29,7 +29,7 @@ class Homepage_category(unittest.TestCase):
 
         result = mysql_test.query(action='page_view', page_name='category', event_time=begin_date)
         print(result)
-        assert len(result) == 1, f'买点数量错误，预期为1个，实际为{len(result)}'
+        assert len(result) == 1, f'埋点数量错误，预期为1个，实际为{len(result)}'
         end_raw_data = result[0]['raw_data']
         raw_data = json.loads(end_raw_data)
         referrer = raw_data['params']['referrer']

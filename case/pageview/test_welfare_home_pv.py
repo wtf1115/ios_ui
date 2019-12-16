@@ -27,7 +27,7 @@ class Welfare_home_pv(unittest.TestCase):
             driver.background_app(5)
 
         result = mysql_test.query(action='page_view', page_name='welfare_home', event_time=begin_date)
-        assert len(result) == 1, f'买点数量错误，预期为1个，实际为{len(result)}'
+        assert len(result) == 1, f'埋点数量错误，预期为1个，实际为{len(result)}'
         page_view_create_time = result[0]['event_time']
         print("target埋点: %s" % page_view_create_time)
 

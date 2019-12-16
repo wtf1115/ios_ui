@@ -24,10 +24,9 @@ class Homepage_on_click_navbar_search(unittest.TestCase):
             driver.background_app(3)
 
         result = mysql_test.query(action='on_click_navbar_search', page_name='search_home', event_time=begin_date)
-        assert len(result) == 1, f'买点数量错误，预期为1个，实际为{len(result)}'
+        assert len(result) == 1, f'埋点数量错误，预期为1个，实际为{len(result)}'
         end_date_home_open = result[0]['event_time']
         print("target埋点: %s" % end_date_home_open)
-        assert len(result) == 1, f'买点数量错误，预期为1个，实际为{len(result)}'
 
 
 if __name__ == '__main__':

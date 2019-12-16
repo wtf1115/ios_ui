@@ -24,7 +24,7 @@ class Homepage_on_app_session_over(unittest.TestCase):
             driver.background_app(3)
 
         result = mysql_test.query(action='on_app_session_over', event_time=begin_date)
-        assert len(result) == 1, f'买点数量错误，预期为1个，实际为{len(result)}'
+        assert len(result) == 1, f'埋点数量错误，预期为1个，实际为{len(result)}'
         end_page_view = result[0]['event_time']
         end_raw_data = result[0]['raw_data']
         raw_data = json.loads(end_raw_data)

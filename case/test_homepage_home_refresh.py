@@ -28,7 +28,7 @@ class Homepage_home_open(unittest.TestCase):
             driver.background_app(3)
         # 首页埋点
         result = mysql_test.query(action='refresh_page', page_name='home', event_time=begin_date)
-        assert len(result) == 1, f'买点数量错误，预期为1个，实际为{len(result)}'
+        assert len(result) == 1, f'埋点数量错误，预期为1个，实际为{len(result)}'
 
 
 if __name__ == '__main__':
