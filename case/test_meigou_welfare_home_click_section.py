@@ -13,7 +13,7 @@ class Meigou_welfare_home_click_section(unittest.TestCase):
 
     def test_welfare_home_click_section(self):
         """
-        美购首页->品类聚合除皱廋脸
+        点击美购首页聚合icon
         """
 
         begin_date = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')

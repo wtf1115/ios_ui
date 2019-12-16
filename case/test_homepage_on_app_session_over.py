@@ -14,7 +14,7 @@ class Homepage_on_app_session_over(unittest.TestCase):
 
     def test_on_app_session_over(self):
         """
-        首页, 退出
+        退出app
         """
 
         begin_date = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')

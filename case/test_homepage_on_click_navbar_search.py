@@ -13,7 +13,7 @@ class Homepage_on_click_navbar_search(unittest.TestCase):
 
     def test_on_click_navbar_search(self):
         """
-        点击首页搜索
+        点击首页搜索框
         """
         begin_date = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         print(begin_date)
