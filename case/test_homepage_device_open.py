@@ -13,7 +13,7 @@ class Homepage_device_open(unittest.TestCase):
 
     def test_device_open(self):
         """
-        首页品类聚合->点击玻尿酸
+        打开app
         """
 
         begin_date = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')

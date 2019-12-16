@@ -9,12 +9,12 @@ from common.gmdriver import GMdriver
 from common.Log import Log
 
 
-class Homepage_home_open(unittest.TestCase):
+class Homepage_home_refresh(unittest.TestCase):
     log = Log()
 
     def test_home_open(self):
         """
-        首页品类聚合->点击玻尿酸
+        首页下拉刷新
         """
 
         begin_date = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
