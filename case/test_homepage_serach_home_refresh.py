@@ -8,10 +8,10 @@ from common.gmdriver import GMdriver
 
 from common.Log import Log
 
-class Homepage_search_home_pv(unittest.TestCase):
+class Search_home_refresh(unittest.TestCase):
     log = Log()
     # ios 抓不到这些卡片元素···· 难以判定卡片类型
-    def test_search_home_pv(self):
+    def test_search_home_refresh(self):
         """
         点击首页搜索
         """
