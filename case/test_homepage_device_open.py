@@ -1,12 +1,5 @@
-import unittest
-import datetime
-import time
-import json
+from common import *
 
-from common.dbMysql import mysql_test
-from common.gmdriver import GMdriver
-
-from common.Log import Log
 
 class Homepage_device_open(unittest.TestCase):
     log = Log()

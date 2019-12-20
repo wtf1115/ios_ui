@@ -4,6 +4,8 @@ from selenium.webdriver.common.by import By
 import time
 from selenium.webdriver.support.ui import WebDriverWait  # added by longshu on 2019-12-06
 
+__all__ = ['GMdriver']
+
 
 class GMdriver(BasePage):
     gengmei_alert = (By.ID, "com.wanmeizhensuo.zhensuo:id/dialog_home_img_cancel")
@@ -133,6 +135,7 @@ class GMdriver(BasePage):
         """
         self.waiter.until(lambda x: self.driver.find_element_by_xpath(
             '(//XCUIElementTypeStaticText[@name="玻尿酸"])[1]/..')).click()
+
     def click_welfare_home(self):
         """
         搜索的美购首页
@@ -140,7 +143,6 @@ class GMdriver(BasePage):
         """
         self.waiter.until(
             lambda x: self.driver.find_element_by_xpath('//XCUIElementTypeStaticText[@name="美购"]')).click()
-
 
     def click_welfare(self):
         """
@@ -184,7 +186,6 @@ class GMdriver(BasePage):
         self.waiter.until(
             lambda x: self.driver.find_element_by_xpath('//XCUIElementTypeButton[@name="日记"]')).click()
 
-
     def click_content(self):
         """
         美购搜索中点击综合
@@ -200,7 +201,6 @@ class GMdriver(BasePage):
         """
         self.waiter.until(
             lambda x: self.driver.find_element_by_xpath('//XCUIElementTypeButton[@name="百科"]')).click()
-
 
     def click_tractate(self):
         """
@@ -227,6 +227,14 @@ class GMdriver(BasePage):
         self.waiter.until(
             lambda x: self.driver.find_element_by_xpath('//XCUIElementTypeButton[@name="医生"]')).click()
 
+    def click_city(self):
+        '''
+        点击城市选择
+        :return:
+        '''
+        self.waiter.until(
+            lambda x: self.driver.find_element_by_xpath(
+                '//XCUIElementTypeButton[@name="home navi plus btn"]/../XCUIElementTypeButton')).click()
 
     def click_shopping_cart(self):
         """

@@ -1,12 +1,4 @@
-import unittest
-import datetime
-import time
-import json
-
-from common.dbMysql import mysql_test
-from common.gmdriver import GMdriver
-
-from common.Log import Log
+from common import *
 
 
 class Homepage_on_app_session_over(unittest.TestCase):

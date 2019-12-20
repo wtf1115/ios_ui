@@ -5,6 +5,8 @@ import pymysql
 dev_id = "73C73DC3-CD60-4F78-BBB5-05E41D384691"
 dev_type = "ios"
 
+__all__ = ['mysql_test']
+
 
 class GMMysql(object):
     def __init__(self, host, port, user, password, db, charset='utf8', cursorclass=pymysql.cursors.DictCursor):
