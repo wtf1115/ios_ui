@@ -18,9 +18,10 @@ class GMdriver(BasePage):
     gengmei_scanagain = (By.ID, "com.wanmeizhensuo.zhensuo:id/face_result_tv_once_again")
     report_share = (By.ID, "com.wanmeizhensuo.zhensuo:id/face_result_iv_share")
     gengmei_skin = (By.ID, "com.wanmeizhensuo.zhensuo:id/face_result_tv_skin")
-    popup_x_xpath_ios = (By.XPATH, '//XCUIElementTypeApplication[@name="更美TEST"]/XCUIElementTypeWindow[1]/XCUIElemen'
-                                   'tTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIEleme'
-                                   'ntTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeImage')
+    popup_x_xpath_ios = (
+    By.XPATH, '//XCUIElementTypeApplication[contains(@name, "更美")]/XCUIElementTypeWindow[1]/XCUIElemen'
+              'tTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIEleme'
+              'ntTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeImage')
 
     def __init__(self):
 
@@ -280,6 +281,10 @@ class GMdriver(BasePage):
     def click_search_button_sys(self):
         self.waiter.until(
             lambda x: self.driver.find_element_by_xpath('//XCUIElementTypeButton[@name="Search"]')).click()
+
+    def click_create_topic(self):
+        self.waiter.until(
+            lambda x: self.driver.find_element_by_xpath('//XCUIElementTypeButton[@name="home navi plus btn"]')).click()
 
     def __enter__(self):
         # 调试覆盖，有可能失败
