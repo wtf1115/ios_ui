@@ -1,8 +1,8 @@
 import os
 import unittest
-import requests
 import time
 from BeautifulReport import BeautifulReport
+from common import mitm
 
 # 当前脚本所在文件真实路径
 cur_path = os.path.dirname(os.path.realpath(__file__))
@@ -75,4 +75,5 @@ def get_report_file(report_path):
 if __name__ == '__main__':
     all_case = add_case()  # 1加载用例
     run_case(all_case)  # 2执行用例
+
 
