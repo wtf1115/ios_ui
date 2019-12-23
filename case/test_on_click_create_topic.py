@@ -19,7 +19,6 @@ class On_click_create_topic(unittest.TestCase):
             driver.background_app(3)
         result = mitm_query(action='on_click_create_topic', page_name='home', event_time=begin_date)
 
-        print(result)
         assert len(result) == 1, f'埋点数量错误，预期为1个，实际为{len(result)}'
 
 
